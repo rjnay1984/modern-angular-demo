@@ -107,10 +107,35 @@
           }
         },
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@briebug/cypress-schematic:cypress",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "modern-angular-demo:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "modern-angular-demo:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
             "devServerTarget": "modern-angular-demo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "modern-angular-demo:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "modern-angular-demo:serve",
+            "watch": true,
+            "headless": false
           },
           "configurations": {
             "production": {

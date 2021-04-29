@@ -1,4 +1,5 @@
-import 'jest-preset-angular';
+/* eslint-disable */
+import 'jest-preset-angular/setup-jest';
 
 /* global mocks for jsdom */
 const mock = () => {
